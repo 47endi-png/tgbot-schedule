@@ -1,0 +1,19 @@
+{
+  "name": "tgbot-schedule",
+  "version": "1.0.0",
+  "description": "Telegram bot для расписания СахГУ с автоматической рассылкой",
+  "type": "module",
+  "main": "telegram-sakhgu-schedule-auto-weeks.mjs",
+  "scripts": {
+    "start": "node telegram-sakhgu-schedule-auto-weeks.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["telegram", "bot", "schedule"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "node-cron": "^4.6.0",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
