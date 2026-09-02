@@ -270,7 +270,7 @@ bot.onText(/^\/start(?:@\w+)?\s*$/, async (msg) => {
       '/setgroup — назначить этот чат или тему для ежедневной рассылки',
       '/chatid — показать ID чата и темы',
       '',
-      `Рассылка расписания на завтра: ежедневно в 20:00 (${TIMEZONE}).`,
+      `Рассылка расписания на сегодня: ежедневно в 20:00 (${TIMEZONE}).`,
       'Тип недели рассчитывается автоматически и меняется каждый понедельник.'
     ].join('\n'),
     makeSendOptions(msg.message_thread_id || null)
@@ -363,7 +363,7 @@ cron.schedule(
   {
     timezone: TIMEZONE,
     noOverlap: true,
-    name: 'send-tomorrow-schedule'
+name: 'send-tomorrow-schedule'
   }
 );
 

@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram Schedule Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/path/to/tgbot
+ExecStart=/usr/bin/node /path/to/tgbot/telegram-sakhgu-schedule-auto-weeks.mjs
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
